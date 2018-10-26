@@ -1,6 +1,5 @@
 
-# Scalars, Vectors, Matrices and Tensors
-
+# Scalars, Vectors, Matrices and Tensors - Code Along
 
 
 ## Introduction 
