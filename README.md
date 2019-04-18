@@ -117,7 +117,7 @@ print (x[-1:0:-1]) # reverse the vector!
 ## Matrices
 > A matrix is a 2 dimensional array of numbers written between square brackets. 
 
-As compared to vectors, a matrix is a multi-dimensional array of scalars that can possibly have multiple rows as well as columns. It is often denoted by an $m * n$ notation where $m$ is the number of rows and $n$ is number of columns, as shown below. Every scalar component of a matrix can be addressed by specifying (row,column) values as tuples $(m,n)$. A matrix is usually written down as:
+As compared to vectors, a matrix is a multi-dimensional array of scalars that can possibly have multiple rows as well as columns. It is often denoted by an $m \times n$ notation where $m$ is the number of rows and $n$ is number of columns, as shown below. Every scalar component of a matrix can be addressed by specifying (row,column) values as tuples $(m,n)$. A matrix is usually written down as:
 
 
 $$
@@ -130,9 +130,9 @@ $$
   \end{array} } \right]
 $$
 
-We usually give matrices uppercase variable names with bold typeface, such as $A$. If a real-valued matrix $A$ has a height of $m$ and a width of $n$ as above, we state this as $A \in \mathbb{R}^{m*n}$.In machine learning, a vector can be seen as a special case of a matrix.
+We usually give matrices uppercase variable names with bold typeface, such as $A$. If a real-valued matrix $A$ has a height of $m$ and a width of $n$ as above, we state this as $A \in \mathbb{R}^{m \times n}$.In machine learning, a vector can be seen as a special case of a matrix.
 
-> A vector is a matrix that has only 1 column, so you have an $(m * 1)$-matrix. $m$ is the number of rows, and 1 here is the number of columns, so a matrix with just one column is a vector.
+> A vector is a matrix that has only 1 column, so you have an $(m \times 1)$-matrix. $m$ is the number of rows, and 1 here is the number of columns, so a matrix with just one column is a vector.
 
 ### Defining a Matrix in Python
 
