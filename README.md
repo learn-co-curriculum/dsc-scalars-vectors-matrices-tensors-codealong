@@ -30,7 +30,7 @@ Processing single number values as we have been looking at so far all belong to 
 
 > A vector is an **array** of numbers arranged in some order, as opposed to the single numbered scalar. 
 
-A numbers contained within a vector are known as scalar components of the vector. Vectors are built from individual components, which are numerical in nature. We can think of a vector as a list of numbers, and vector algebra as operations performed on the numbers in the list. 
+The numbers contained within a vector are known as scalar components of the vector. Vectors are built from individual components, which are numerical in nature. We can think of a vector as a list of numbers, and vector algebra as operations performed on the numbers in the list. 
 
 \begin{equation}
 x = 
