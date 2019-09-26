@@ -185,14 +185,14 @@ print (X[:]) # all rows and all columns
 
 You can also use indexing to address and assign new values to elements of a matrix:
 ```python
-X[:, 0] = [[11], [12], [13]] # set column 0
-X[2, 2] = 15           # set a single element in third row and third column
+X[:, 0] = [11, 12, 13]  # set the values in first column to this sequence
+X[2, 2] = 15  # set a single element in third row and third column
 print (X)
 
-X[2] = 16  # sets everything in row 3 to 16!
+X[2] = 16  # sets everything in the third row to 16!
 print (X)
 
-X[:,2] = 17  # sets everything in column 3 to 17!
+X[:,2] = 17  # sets everything in the third column to 17!
 print (X)
 ```
 
