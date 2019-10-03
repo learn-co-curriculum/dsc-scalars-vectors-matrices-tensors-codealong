@@ -13,13 +13,13 @@ You will be able to:
 
 ## Background
 
-Let's start with defining some mathematical entities that data scientists routinely come across while dealing with machine learning and deep learning algorithms. These entities are used to store, process and represent our data and analytical activities are mainly focused at manipulating these algebraic entities to provide solutions to unknown data entities. 
+Let's start by defining some mathematical entities that data scientists routinely come across while dealing with machine learning and deep learning algorithms. These entities are used to store, process and represent our data and analytical activities are mainly focused on manipulating these algebraic entities to provide solutions to unknown data entities. 
 
 <img src="images/new_objects.png" width = "600">
 ## Scalars
 > A scalar is a **single number** 
 
-A scalar is the simplest entity in linear algebra compared to other objects, which are usually arrays of multiple numbers. In literature, you'll find scalars represented as lower case italics characters. Scalars need to be defined in terms of type of number these carry. For example: 
+A scalar is the simplest entity in linear algebra compared to other objects, which are usually arrays of multiple numbers. In literature, you'll find scalars represented as lower case italics characters. Scalars need to be defined in terms of the type of number these carry. For example: 
 
 * **Real valued scalars**: Let $S \in  \mathbb{R} $  be the salary of an individual
 * **Natural number scalars**: Let $n \in \mathbb{N}$ be the number of floors in a building
@@ -52,7 +52,7 @@ We can set index values to elements of a vector by defining a set containing the
 
 ### A geometric intuition
 
-A vector can be thought as an entity that represents spatial coordinates in an n-dimensional space, where n is the number of dimensions. A vector can also represent a line from the origin of the vector space with a direction and a magnitude, based on scalar components.  below is an example of a vector in 3D vector space. 
+A vector can be thought of as an entity that represents spatial coordinates in an n-dimensional space, where n is the number of dimensions. A vector can also represent a line from the origin of the vector space with a direction and a magnitude, based on scalar components.  below is an example of a vector in 3D vector space. 
 
 ![](./images/vec2.png)
 
@@ -60,7 +60,7 @@ Let’s look at how to define a vector in Python.
 
 ### Defining a Vector in Python
 
-In Python, one of the easiest ways to represent a vector is using Numpy arrays. The list scalar values can be used to create a vector in python as shown below:
+In Python, one of the easiest ways to represent a vector is by using Numpy arrays. The list scalar values can be used to create a vector in python as shown below:
 
 ```python 
 # create a vector from list [2,4,6]
@@ -88,7 +88,7 @@ print(x)
 # Code here
 ```
 
-You can use the index values to address individual scalar values within this vector , similar to python list indexing as shown below:
+You can use the index values to address individual scalar values within this vector, similar to python list indexing as shown below:
 ```python
 print (x[0])  # first element
 print (x[2])  # third element
@@ -115,7 +115,7 @@ print (x[-1:0:-1]) # reverse the vector!
 ```
 
 ## Matrices
-> A matrix is a 2 dimensional array of numbers written between square brackets. 
+> A matrix is a 2-dimensional array of numbers written between square brackets. 
 
 As compared to vectors, a matrix is a multi-dimensional array of scalars that can possibly have multiple rows as well as columns. It is often denoted by an $m \times n$ notation where $m$ is the number of rows and $n$ is number of columns, as shown below. Every scalar component of a matrix can be addressed by specifying (row,column) values as tuples $(m,n)$. A matrix is usually written down as:
 
