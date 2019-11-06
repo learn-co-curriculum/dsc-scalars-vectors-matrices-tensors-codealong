@@ -1,30 +1,32 @@
 
-# Scalars, Vectors, Matrices and Tensors - Code Along
+# Scalars, Vectors, Matrices, and Tensors - Code Along
 
 
 ## Introduction 
-In this lesson, you'll be introduced to the basic mathematical entities used in linear algebra and how these get defined. We'll also look at how these entities are created (and later manipulated) in Python using NumPy. 
+In this lesson, you'll be introduced to the basic mathematical entities used in linear algebra. We'll also look at how these entities are created (and later manipulated) in Python using NumPy. 
 
 ## Objectives
 You will be able to:
-* Understand and describe scalars, vectors, matrices and Tensor objects
-* Understand how vectors and matrices are created in Python with Numpy 
-* Perform basic vector operations tests like `.shape()` and `.transpose()`
+
+- Compare scalars, vectors, matrices, and tensors 
+- Create vectors and matrices using Numpy and Python
+- Use the transpose method to transpose Numpy matrices 
+
 
 ## Background
 
 Let's start by defining some mathematical entities that data scientists routinely come across while dealing with machine learning and deep learning algorithms. These entities are used to store, process and represent our data and analytical activities are mainly focused on manipulating these algebraic entities to provide solutions to unknown data entities. 
 
 <img src="images/new_objects.png" width = "600">
+
 ## Scalars
 > A scalar is a **single number** 
 
-A scalar is the simplest entity in linear algebra compared to other objects, which are usually arrays of multiple numbers. In literature, you'll find scalars represented as lower case italics characters. Scalars need to be defined in terms of the type of number these carry. For example: 
+A scalar is the simplest entity in linear algebra compared to other objects, which are usually arrays of multiple numbers. In literature, you'll find scalars represented as lower case italics characters. Scalars need to be defined in terms of the type of number they carry. For example: 
 
 * **Real valued scalars**: Let $S \in  \mathbb{R} $  be the salary of an individual
 * **Natural number scalars**: Let $n \in \mathbb{N}$ be the number of floors in a building
 
-Processing single number values as we have been looking at so far all belong to scalar and scalar operations i.e. processing one number at a time, even when you're dealing with larger datasets. 
 
 ## Vectors 
 
@@ -52,15 +54,15 @@ We can set index values to elements of a vector by defining a set containing the
 
 ### A geometric intuition
 
-A vector can be thought of as an entity that represents spatial coordinates in an n-dimensional space, where n is the number of dimensions. A vector can also represent a line from the origin of the vector space with a direction and a magnitude, based on scalar components.  below is an example of a vector in 3D vector space. 
+A vector can be thought of as an entity that represents spatial coordinates in an n-dimensional space, where n is the number of dimensions. A vector can also represent a line from the origin of the vector space with a direction and a magnitude, based on scalar components. Below is an example of a vector in 3D vector space:  
 
 ![](./images/vec2.png)
 
 Let’s look at how to define a vector in Python.
 
-### Defining a Vector in Python
+### Defining a vector in Python
 
-In Python, one of the easiest ways to represent a vector is by using Numpy arrays. The list scalar values can be used to create a vector in python as shown below:
+In Python, one of the easiest ways to represent a vector is by using Numpy arrays. The list scalar values can be used to create a vector in Python as shown below:
 
 ```python 
 # create a vector from list [2,4,6]
@@ -74,7 +76,7 @@ print(v)
 # Code here 
 ```
 
-### Indexing a Vector
+### Indexing a vector
 
 There will be times when you have a lot of data in a vector (or array as we now know it) and you want to extract a portion of the data for some analysis. For example, maybe you want to know the first few values of a long array, or you want the integral of data between $x = 4$ and $x = 6$, but your vector covers $0 < x < 10$. Indexing is the way to do these things. Let's generate a long vector to see this action using 10 values between -pi and pi (i.e. -3.14 to 3.14):
 
@@ -88,7 +90,7 @@ print(x)
 # Code here
 ```
 
-You can use the index values to address individual scalar values within this vector, similar to python list indexing as shown below:
+You can use the index values to address individual scalar values within this vector, similar to Python list indexing as shown below:
 ```python
 print (x[0])  # first element
 print (x[2])  # third element
@@ -117,7 +119,7 @@ print (x[-1:0:-1]) # reverse the vector!
 ## Matrices
 > A matrix is a 2-dimensional array of numbers written between square brackets. 
 
-As compared to vectors, a matrix is a multi-dimensional array of scalars that can possibly have multiple rows as well as columns. It is often denoted by an $m \times n$ notation where $m$ is the number of rows and $n$ is number of columns, as shown below. Every scalar component of a matrix can be addressed by specifying (row,column) values as tuples $(m,n)$. A matrix is usually written down as:
+As compared to vectors, a matrix is a multi-dimensional array of scalars that can possibly have multiple rows as well as columns. It is often denoted by an $m \times n$ notation where $m$ is the number of rows and $n$ is number of columns, as shown below. Every scalar component of a matrix can be addressed by specifying (row, column) values as tuples $(m, n)$. A matrix is usually written down as:
 
 
 $$
@@ -130,13 +132,13 @@ $$
   \end{array} } \right]
 $$
 
-We usually give matrices uppercase variable names with bold typeface, such as $A$. If a real-valued matrix $A$ has a height of $m$ and a width of $n$ as above, we state this as $A \in \mathbb{R}^{m \times n}$.In machine learning, a vector can be seen as a special case of a matrix.
+We usually give matrices uppercase variable names with bold typeface, such as $A$. If a real-valued matrix $A$ has a height of $m$ and a width of $n$ as above, we state this as $A \in \mathbb{R}^{m \times n}$. In machine learning, a vector can be seen as a special case of a matrix.
 
 > A vector is a matrix that has only 1 column, so you have an $(m \times 1)$-matrix. $m$ is the number of rows, and 1 here is the number of columns, so a matrix with just one column is a vector.
 
-### Defining a Matrix in Python
+### Defining a matrix in Python
 
-As opposed to one-dimensional arrays used by vectors, We can represent a matrix in Python using a multi-dimensional NumPy array. A NumPy array can be constructed given a list of lists. For example, below is a 3 row, 3 column matrix created from a list of three lists.
+As opposed to one-dimensional arrays used by vectors, we can represent a matrix in Python using a multi-dimensional NumPy array. A NumPy array can be constructed given a list of lists. For example, below is a 3 row, 3 column matrix created from a list of three lists.
 ```python
 X = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(X)
@@ -154,7 +156,7 @@ print(X)
 We can also define matlab styles matrices (for those used to matlab definitions) in the following way:
 ```python
 Y = np.mat([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print (Y)
+print(Y)
 ```
 
 
@@ -166,7 +168,7 @@ Numpy **matrices** are always 2-dimensional, while numpy **arrays** (also referr
 
 Arrays also offer a clear distinction between element-wise operations and linear algebra operations as you'll see later.
 
-### Matrix Indexing
+### Matrix indexing
 
 In 2D-arrays like the one we created above you can use a (row, column) notation. Use a `:` to indicate all rows or all columns. Remember that the indexing for both vectors and matrices start with 0 and ends at (m-1) and (n-1).
 
@@ -201,7 +203,7 @@ print (X)
 # Code here 
 ```
 
-## Shape of a Array
+## Shape of an array
 
 The shape (or "dimensions") of a vector/matrix array tells us the number of values for each dimension. For a 2-dimensional array it gives you the number of rows and the number of columns. Let’s find the shape of our preceding 2-D and 3-D arrays created above. For a NumPy object, you can access its shape as shown below:
 ```python
@@ -230,7 +232,7 @@ This can be better understood looking at this image :
 
 <img src="images/new_matrix.png" width="350">
 
-Numpy provides the transpose operation by simply using `.T` or `np.transpose()` with the array that needs to be transposed as shown below:
+Numpy provides the transpose operation by using the `.T` attribute or the `np.transpose()` function with the array that needs to be transposed as shown below:
 
 ```python
 # create a transpose of a matrix
@@ -261,13 +263,8 @@ Tensor notation is just like matrix notation, with a capital letter that represe
 <img src="images/new_tensors.png" width="700">
 
 As a tool, tensors and tensor algebra are widely used in the fields of physics and engineering, and in data science it is particularly useful when you'll learn about deep learning models. 
-We'll revisit tensors and relevant operations in the deep learning sections and explain how tensors are created, manipulated and saved using more advanced analytical tools like Keras. 
+We'll revisit tensors and relevant operations in the deep learning sections and explain how tensors are created, manipulated, and saved using more advanced analytical tools like Keras. 
 
 ## Summary 
 
-In this lesson, you learned about basic mathematical entities including scalars, vectors, matrices and tensors to solve linear algebraic problems. You focused on creating vectors and matrices in python and Numpy. You also saw how to index and slice these entities and check for the shape of underlying data elements. Next, you'll look at some of the key operations with matrices and vectors. 
-
-
-```python
-
-```
+In this lesson, you learned about basic mathematical entities including scalars, vectors, matrices, and tensors to solve linear algebraic problems. You focused on creating vectors and matrices in Python and Numpy. You also saw how to index and slice these entities and check for the shape of underlying data elements. Next, you'll look at some of the key operations with matrices and vectors. 
