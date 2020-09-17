@@ -73,7 +73,9 @@ print(v)
 
 
 ```python
-# Code here 
+import numpy as np
+v = np.array([2, 4, 6])
+print(v)
 ```
 
 ### Indexing a vector
@@ -87,7 +89,8 @@ print(x)
 
 
 ```python
-# Code here
+x = np.linspace(-np.pi, np.pi, 10)
+print(x)
 ```
 
 You can use the index values to address individual scalar values within this vector, similar to Python list indexing as shown below:
@@ -100,7 +103,10 @@ print (x[-2]) # second to last element
 
 
 ```python
-# Code here 
+print (x[0])  # first element
+print (x[2])  # third element
+print (x[-1]) # last element
+print (x[-2]) # second to last element
 ```
 
 You can select a range of elements too. The syntax a:b extracts the a-th to (b-1)-th elements. The syntax a:b:n starts at a, skips n elements up to the index b.
@@ -108,12 +114,15 @@ You can select a range of elements too. The syntax a:b extracts the a-th to (b-1
 print (x[1:4])     # second to fourth element. Element 5 is not included
 print (x[0:-1:2])  # every other element
 print (x[:])       # print the whole vector
-print (x[-1:0:-1]) # reverse the vector!
+print (x[::-1]) # reverse the vector!
 ```
 
 
 ```python
-# Code here 
+print (x[1:4])     # second to fourth element. Element 5 is not included
+print (x[0:-1:2])  # every other element
+print (x[:])       # print the whole vector
+print (x[::-1]) # reverse the vector!
 ```
 
 ## Matrices
