@@ -1,4 +1,3 @@
-
 # Scalars, Vectors, Matrices, and Tensors - Code Along
 
 
@@ -17,7 +16,7 @@ You will be able to:
 
 Let's start by defining some mathematical entities that data scientists routinely come across while dealing with machine learning and deep learning algorithms. These entities are used to store, process and represent our data and analytical activities are mainly focused on manipulating these algebraic entities to provide solutions to unknown data entities. 
 
-<img src="images/new_objects.png" width = "600">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_objects.png" width = "600">
 
 ## Scalars
 > A scalar is a **single number** 
@@ -56,7 +55,7 @@ We can set index values to elements of a vector by defining a set containing the
 
 A vector can be thought of as an entity that represents spatial coordinates in an n-dimensional space, where n is the number of dimensions. A vector can also represent a line from the origin of the vector space with a direction and a magnitude, based on scalar components. Below is an example of a vector in 3D vector space:  
 
-![](./images/vec2.png)
+![](https://curriculum-content.s3.amazonaws.com/data-science/images/vec2.png)
 
 Let’s look at how to define a vector in Python.
 
@@ -222,7 +221,7 @@ The vector has only one dimension as shown by the shape parameter whereas the 2D
 
 Using transposition, you can convert a row vector to a column vector and vice versa. Let's see how its done in vectors and matrices.
 
-<img src="images/new_vector.png" width="150">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_vector.png" width="150">
 
 Neural networks frequently process weights and inputs of different sizes where the dimensions do not meet the requirements of matrix multiplication. Matrix transpose provides a way to "rotate" one of the matrices so that the operation complies with multiplication requirements and can continue. There are two steps to transpose a matrix:
 
@@ -230,7 +229,7 @@ Neural networks frequently process weights and inputs of different sizes where t
 * Reverse the order of elements in each row (e.g. [a b c] becomes [c b a]).
 This can be better understood looking at this image :
 
-<img src="images/new_matrix.png" width="350">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_matrix.png" width="350">
 
 Numpy provides the transpose operation by using the `.T` attribute or the `np.transpose()` function with the array that needs to be transposed as shown below:
 
@@ -260,7 +259,7 @@ In some cases, you'll need an array with more than two axes. In the general case
 A vector is a one-dimensional or "first order tensor" and a matrix is a two-dimensional or "second order tensor".
 Tensor notation is just like matrix notation, with a capital letter that represents a tensor, and lowercase letters with a subscript representing scalar values within the tensor. Many operations that can be performed with scalars, vectors, and matrices can be reformulated to be performed with tensors as well. The image below shows some of these operations for a  3D tensor. 
 
-<img src="images/new_tensors.png" width="700">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/new_tensors.png" width="700">
 
 As a tool, tensors and tensor algebra are widely used in the fields of physics and engineering, and in data science it is particularly useful when you'll learn about deep learning models. 
 We'll revisit tensors and relevant operations in the deep learning sections and explain how tensors are created, manipulated, and saved using more advanced analytical tools like Keras. 
